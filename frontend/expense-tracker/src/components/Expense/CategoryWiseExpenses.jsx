@@ -59,6 +59,7 @@ const CategoryWiseExpenses = ({ transactions }) => {
         }
     }, [transactions]);
 
+    
     return (
         <div className="card">
             <div className="mb-4">
