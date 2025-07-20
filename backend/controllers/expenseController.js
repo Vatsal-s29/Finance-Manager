@@ -28,6 +28,52 @@ exports.addExpense = async (req, res) => {
     }
 };
 
+exports.bulkAddExpense = async (req, res) => {
+    const userId = req.user.id;
+    try {
+        const { expenses } = req.body || {};
+
+        // Validation: Check if expenses array exists and is not empty
+        if (!expenses || !Array.isArray(expenses) || expenses.length === 0) {
+            return res
+                .status(400)
+                .json({ message: "Expense array is required" });
+        }
+
+        // Validate each expense entry
+        for (let i = 0; i < expenses.length; i++) {
+            const { category, amount, date } = expenses[i];
+            if (!category || !amount || !date) {
+                return res.status(400).json({
+                    message: `All fields are required for expense entry ${
+                        i + 1
+                    }`,
+                });
+            }
+        }
+
+        // Prepare expense data for bulk insert
+        const expenseData = expenses.map((expense) => ({
+            userId,
+            icon: expense.icon || "",
+            category: expense.category,
+            amount: expense.amount,
+            date: new Date(expense.date),
+        }));
+
+        // Bulk insert
+        const savedExpenses = await Expense.insertMany(expenseData);
+
+        res.status(200).json({
+            message: `${savedExpenses.length} expenses added successfully`,
+            expenses: savedExpenses,
+        });
+    } catch (error) {
+        console.error("Bulk add expense error:", error);
+        res.status(500).json({ message: "Server Error" });
+    }
+};
+
 // Get All Expense Source
 exports.getAllExpense = async (req, res) => {
     const userId = req.user.id;

@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    LuUtensils,
+    LuHandCoins,
     LuTrendingUp,
     LuTrendingDown,
     LuTrash2,
@@ -26,7 +26,7 @@ const TransactionInfoCard = ({
                 {icon ? (
                     <img src={icon} alt={title} className="w-6 h-6" />
                 ) : (
-                    <LuUtensils />
+                    <LuHandCoins />
                 )}
             </div>
 

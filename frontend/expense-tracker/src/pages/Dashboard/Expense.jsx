@@ -81,6 +81,26 @@ const Expense = () => {
         }
     };
 
+    // bulk add expense
+    const bulkAddExpense = async (expenses) => {
+        try {
+            const response = await axiosInstance.post(
+                API_PATHS.EXPENSE.BULK_ADD,
+                {
+                    expenses,
+                }
+            );
+
+            setOpenAddExpenseModal(false);
+            toast.success("Expense added successfully");
+            fetchExpenseDetails();
+
+            return response.data;
+        } catch (error) {
+            throw error;
+        }
+    };
+
     // Delete Expense
     const deleteExpense = async (id) => {
         try {
@@ -151,7 +171,11 @@ const Expense = () => {
                     onClose={() => setOpenAddExpenseModal(false)}
                     title="Add Expense"
                 >
-                    <AddExpenseForm onAddExpense={handleAddExpense} />
+                    <AddExpenseForm
+                        onAddExpense={handleAddExpense}
+                        onBulkAddExpense={bulkAddExpense}
+                        fetchExpenses={fetchExpenseDetails}
+                    />
                 </Modal>
 
                 <Modal

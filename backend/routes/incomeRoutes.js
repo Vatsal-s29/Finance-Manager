@@ -1,6 +1,7 @@
 const express = require("express");
 const {
     addIncome,
+    bulkAddIncome,
     getAllIncome,
     deleteIncome,
     downloadIncomeExcel,
@@ -10,6 +11,7 @@ const { protect } = require("../middleware/authMiddleware");
 const router = express.Router();
 
 router.post("/add", protect, addIncome);
+router.post("/bulk-add", protect, bulkAddIncome);
 router.get("/get", protect, getAllIncome);
 router.get("/downloadexcel", protect, downloadIncomeExcel);
 router.delete("/:id", protect, deleteIncome);
