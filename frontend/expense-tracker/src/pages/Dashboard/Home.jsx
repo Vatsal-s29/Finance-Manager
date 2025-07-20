@@ -47,21 +47,12 @@ const Home = () => {
         return () => {};
     }, []);
 
-    // // ! Debugging logs
-    // console.log(
-    //     "dashboardData?.last60DaysIncome?.transactions: ",
-    //     dashboardData?.last60DaysIncome?.transactions
-    // );
-    // console.log(
-    //     "Sliced data for RecentIncomeWithChart: ",
-    //     dashboardData?.last60DaysIncome?.transactions?.slice(0, 4)
-    // );
-    // console.log("totalIncome: ", dashboardData?.totalIncome);
-    // // ! Debugging logs
-
     return (
         <DashboardLayout activeMenu="Dashboard">
             <div className="my-5 mx-auto">
+                <h5 className="text-2xl text-gray-700 drop-shadow-sm my-5">
+                    Financial Overview
+                </h5>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <InfoCard
                         icon={<IoMdCard />}
@@ -88,7 +79,6 @@ const Home = () => {
                         color="bg-red-500"
                     />
                 </div>
-
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     <RecentTransactions
                         transactions={dashboardData?.recentTransactions}
@@ -100,7 +90,13 @@ const Home = () => {
                         totalIncome={dashboardData?.totalIncome || 0}
                         totalExpense={dashboardData?.totalExpenses || 0}
                     />
+                </div>
 
+                <h5 className="text-2xl text-gray-700 drop-shadow-sm my-5">
+                    Expense Overview
+                </h5>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     <ExpenseTransactions
                         transactions={
                             dashboardData?.last30DaysExpenses?.transactions ||
@@ -115,7 +111,13 @@ const Home = () => {
                             []
                         }
                     />
+                </div>
 
+                <h5 className="text-2xl text-gray-700 drop-shadow-sm my-5">
+                    Income Overview
+                </h5>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                     <RecentIncomeWithChart
                         data={
                             dashboardData?.last60DaysIncome?.transactions?.slice(

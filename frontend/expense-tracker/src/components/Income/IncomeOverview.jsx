@@ -7,18 +7,11 @@ const IncomeOverview = ({ transactions, onAddIncome }) => {
     const [chartData, setChartData] = useState([]);
 
     useEffect(() => {
-        console.log("IncomeOverview - transactions:", transactions);
         // Check if transactions is a valid array before processing
         if (Array.isArray(transactions)) {
             const result = prepareIncomeBarChartData(transactions);
-            console.log("IncomeOverview - processed chartData:", result);
             setChartData(result);
         } else {
-            // If transactions is not an array, set empty array
-            console.log(
-                "IncomeOverview - transactions is not an array:",
-                typeof transactions
-            );
             setChartData([]);
         }
     }, [transactions]);
@@ -29,7 +22,8 @@ const IncomeOverview = ({ transactions, onAddIncome }) => {
                 <div>
                     <h5 className="text-lg">Income Overview</h5>
                     <p className="text-xs text-gray-400 mt-0.5">
-                        Track your earnings over different sources and analyze your income
+                        Track your earnings over different sources and analyze
+                        your income
                     </p>
                 </div>
                 <button className="add-btn" onClick={onAddIncome}>

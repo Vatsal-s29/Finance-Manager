@@ -64,3 +64,38 @@ export const prepareExpenseLineChartData = (data = []) => {
 
     return chartData;
 };
+
+export const prepareCategoryWiseExpenseData = (transactions) => {
+    if (!Array.isArray(transactions) || transactions.length === 0) {
+        return [];
+    }
+
+    // Group by category and sum amounts
+    const categoryTotals = transactions.reduce((acc, transaction) => {
+        const category = transaction.category || "Uncategorized";
+        const amount = parseFloat(transaction.amount) || 0;
+
+        if (acc[category]) {
+            acc[category] += amount;
+        } else {
+            acc[category] = amount;
+        }
+        return acc;
+    }, {});
+
+    // Convert to array and sort by amount (descending)
+    const sortedCategories = Object.entries(categoryTotals)
+        .map(([name, amount]) => ({ name, amount }))
+        .sort((a, b) => b.amount - a.amount);
+
+    // Get top 5 and group rest as "Others"
+    const top5 = sortedCategories.slice(0, 5);
+    const others = sortedCategories.slice(5);
+
+    if (others.length > 0) {
+        const othersTotal = others.reduce((sum, item) => sum + item.amount, 0);
+        top5.push({ name: "Others", amount: othersTotal });
+    }
+
+    return top5;
+};

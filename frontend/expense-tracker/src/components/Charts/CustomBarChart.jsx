@@ -38,10 +38,6 @@ const CustomBarChart = ({ data = [], xAxisDataKey }) => {
         return null;
     };
 
-    // Debug: Log the data to see its structure
-    console.log("CustomBarChart data:", data);
-    console.log("xAxisDataKey:", xAxisDataKey);
-
     // If no data, show empty state
     if (!data || data.length === 0) {
         return (
