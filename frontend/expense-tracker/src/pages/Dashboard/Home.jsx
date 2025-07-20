@@ -47,17 +47,17 @@ const Home = () => {
         return () => {};
     }, []);
 
-    // ! Debugging logs OUTSIDE JSX
-    console.log(
-        "dashboardData?.last60DaysIncome?.transactions: ",
-        dashboardData?.last60DaysIncome?.transactions
-    );
-    console.log(
-        "Sliced data for RecentIncomeWithChart: ",
-        dashboardData?.last60DaysIncome?.transactions?.slice(0, 4)
-    );
-    console.log("totalIncome: ", dashboardData?.totalIncome);
-    // ! Debugging logs OUTSIDE JSX
+    // // ! Debugging logs 
+    // console.log(
+    //     "dashboardData?.last60DaysIncome?.transactions: ",
+    //     dashboardData?.last60DaysIncome?.transactions
+    // );
+    // console.log(
+    //     "Sliced data for RecentIncomeWithChart: ",
+    //     dashboardData?.last60DaysIncome?.transactions?.slice(0, 4)
+    // );
+    // console.log("totalIncome: ", dashboardData?.totalIncome);
+    // // ! Debugging logs 
 
     return (
         <DashboardLayout activeMenu="Dashboard">
