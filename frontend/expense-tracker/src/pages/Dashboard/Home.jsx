@@ -47,7 +47,7 @@ const Home = () => {
         return () => {};
     }, []);
 
-    // // ! Debugging logs 
+    // // ! Debugging logs
     // console.log(
     //     "dashboardData?.last60DaysIncome?.transactions: ",
     //     dashboardData?.last60DaysIncome?.transactions
@@ -57,7 +57,7 @@ const Home = () => {
     //     dashboardData?.last60DaysIncome?.transactions?.slice(0, 4)
     // );
     // console.log("totalIncome: ", dashboardData?.totalIncome);
-    // // ! Debugging logs 
+    // // ! Debugging logs
 
     return (
         <DashboardLayout activeMenu="Dashboard">
@@ -83,7 +83,7 @@ const Home = () => {
                         icon={<LuHandCoins />}
                         label="Total Expense"
                         value={addThousandsSeparator(
-                            dashboardData?.totalExpense || 0
+                            dashboardData?.totalExpenses || 0
                         )}
                         color="bg-red-500"
                     />
