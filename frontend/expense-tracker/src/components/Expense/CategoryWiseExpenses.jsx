@@ -72,7 +72,7 @@ const CategoryWiseExpenses = ({ transactions }) => {
                 <CustomPieChart
                     data={pieChartData}
                     label="Total Expenses"
-                    totalAmount={`₹${totalAmount.toFixed(2)}`}
+                    totalAmount={`$${totalAmount.toFixed(2)}`}
                     colors={[
                         "#8884d8",
                         "#82ca9d",

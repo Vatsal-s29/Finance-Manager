@@ -6,7 +6,6 @@ const {
     loginUser,
     getUserInfo,
 } = require("../controllers/authController");
-// const { protect } = require("./middleware/authMiddleware"); // assuming you’re using auth middleware
 
 const router = express.Router();
 
