@@ -41,7 +41,7 @@ npm install
 4. Install receipt processor dependencies:
 
 ```bash
-cd ../../receipt-processor
+cd receipt-processor
 npm install express multer tesseract.js cors node-fetch dotenv
 ```
 
