@@ -3,6 +3,8 @@
 A comprehensive expense tracking and receipt processing application with three main components.  
 ✨ Features **AI-powered receipt reading** to automatically extract and process expense details from uploaded receipts.
 
+Note : See [SETUP.md](SETUP.md) for installation and running instructions.
+
 ---
 
 ## 🚀 Walkthrough
