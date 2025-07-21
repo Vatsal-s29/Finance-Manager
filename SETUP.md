@@ -20,8 +20,8 @@ project/
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd <project-name>
+git clone https://github.com/Vatsal-s29/Finance-Manager
+cd Finance-Manager
 ```
 
 2. Install backend dependencies:
@@ -41,7 +41,7 @@ npm install
 4. Install receipt processor dependencies:
 
 ```bash
-cd receipt-processor
+cd ../../receipt-processor
 npm install express multer tesseract.js cors node-fetch dotenv
 ```
 
