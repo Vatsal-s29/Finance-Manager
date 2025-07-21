@@ -117,7 +117,7 @@ const SignUp = () => {
                                     setPassword(target.value)
                                 }
                                 label="Password"
-                                placeholder="Min 8 Characters"
+                                placeholder="Strong Password"
                                 type="password"
                             />
                         </div>
