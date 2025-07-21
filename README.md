@@ -4,8 +4,31 @@ A comprehensive expense tracking and receipt processing application with three m
 
 ## Walkthrough
 
+## 🏠 Dashboard
 
+![Dashboard1](Dashboard1.jpg)
+![Dashboard2](Dashboard2.jpg)
+![Dashboard3](Dashboard3.jpg)
 
+## 💵 Income Management
+
+![Income1](Income1.jpg)
+![Income2](Income2.jpg)
+![Income Bulk Insert](Income-Bulk-Insert.jpg)
+
+## 💳 Expense Management
+
+![Expense1](Expense1.jpg)
+![Expense2](Expense2.jpg)
+
+## 📄 Add Expenses Using Receipts
+
+![Add Expense Using Receipts](Add-Expense-Using-Receits.jpg)
+
+## 📲 Authentication
+
+![Login](Login.jpg)
+![Signup](Signup.jpg)
 
 ## Components
 
