@@ -7,6 +7,23 @@ Note : See [SETUP.md](SETUP.md) for installation and running instructions.
 
 ---
 
+## 🚀 **Core Features**
+
+✅ **Basic Features**
+
+-   📥 Add income and expense entries directly via the web app.
+-   📅 View all transactions within a selected date range.
+-   📊 Interactive graphs (e.g., expenses by category, expenses over time).
+
+✅ **Advanced Features**
+
+-   🧾 **AI-Powered Receipt Processing**: Extract expenses automatically from uploaded receipts (images & PDFs).
+-   📂 Upload transaction histories from **CSV** or **Excel** files.
+-   📃 Paginated APIs for efficient loading of long transaction lists.
+-   👥 Support for multiple user accounts, enabling personalized dashboards.
+
+---
+
 ## 🚀 Walkthrough
 
 ### 🏠 Dashboard
