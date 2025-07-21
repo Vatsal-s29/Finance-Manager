@@ -1,6 +1,9 @@
-# 💰 Expense Management System
+# 💰 Personal Finance Assistant App
 
-A comprehensive expense tracking and receipt processing application with three main components.  
+The Personal Finance Assistant is a full-stack application designed to help
+users track, manage, and understand their financial activities. Users can log
+income and expenses, categorize transactions, and view summaries of their
+spending habits.
 ✨ Features **AI-powered receipt reading** to automatically extract and process expense details from uploaded receipts.
 
 Note : See [SETUP.md](SETUP.md) for installation and running instructions.
