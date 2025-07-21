@@ -1,44 +1,49 @@
-# Expense Management System
+# 💰 Expense Management System
 
-A comprehensive expense tracking and receipt processing application with three main components.
+A comprehensive expense tracking and receipt processing application with three main components.  
+✨ Features **AI-powered receipt reading** to automatically extract and process expense details from uploaded receipts.
 
-## Walkthrough
+---
 
-## 🏠 Dashboard
+## 🚀 Walkthrough
 
-![Dashboard1](Dashboard1.jpg)
-![Dashboard2](Dashboard2.jpg)
-![Dashboard3](Dashboard3.jpg)
+### 🏠 Dashboard
 
-## 💵 Income Management
+![Dashboard1](images/Dashboard1.jpg)
+![Dashboard2](images/Dashboard2.jpg)
+![Dashboard3](images/Dashboard3.jpg)
 
-![Income1](Income1.jpg)
-![Income2](Income2.jpg)
-![Income Bulk Insert](Income-Bulk-Insert.jpg)
+### 💵 Income Management
 
-## 💳 Expense Management
+![Income1](images/Income1.jpg)
+![Income2](images/Income2.jpg)
+![Income Bulk Insert](images/Income-Bulk-Insert.jpg)
 
-![Expense1](Expense1.jpg)
-![Expense2](Expense2.jpg)
+### 💳 Expense Management
 
-## 📄 Add Expenses Using Receipts
+![Expense1](images/Expense1.jpg)
+![Expense2](images/Expense2.jpg)
 
-![Add Expense Using Receipts](Add-Expense-Using-Receits.jpg)
+### 📄 Add Expenses Using Receipts
 
-## 📲 Authentication
+![Add Expense Using Receipts](images/Add-Expense-Using-Receits.jpg)
 
-![Login](Login.jpg)
-![Signup](Signup.jpg)
+### 📲 Authentication
 
-## Components
+![Login](images/Login.jpg)
+![Signup](images/Signup.jpg)
 
-### Backend
+---
+
+## ⚙️ Components
+
+### 🖥️ Backend
 
 -   API server for expense management
 -   Data processing and storage
 -   RESTful endpoints
 
-### Expense Tracker (Frontend)
+### 📊 Expense Tracker (Frontend)
 
 -   Track daily expenses
 -   Categorize transactions
@@ -46,14 +51,16 @@ A comprehensive expense tracking and receipt processing application with three m
 -   Export expense reports
 -   User-friendly web interface
 
-### Receipt Processor
+### 🤖 AI-Powered Receipt Processor
 
 -   Upload receipt images
--   OCR text extraction using Tesseract.js
--   Automatic data processing
+-   **AI-powered OCR** (using Tesseract.js) for intelligent receipt data extraction
+-   Automatic expense categorization and processing
 -   Standalone processing service
 
-## Technology Stack
+---
+
+## 🛠 Technology Stack
 
 ### Backend
 
@@ -77,6 +84,8 @@ A comprehensive expense tracking and receipt processing application with three m
 -   Responsive design
 -   Real-time expense tracking
 
-## Getting Started
+---
+
+## 🚀 Getting Started
 
 See [SETUP.md](SETUP.md) for installation and running instructions.
